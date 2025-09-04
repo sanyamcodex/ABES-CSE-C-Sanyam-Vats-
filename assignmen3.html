@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cards</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card-content h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .card-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff5722;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: #ff5722;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #e64a19;
+        }
+    </style>            
+</head>
+<body>
+    <div class="container">
+        <!-- Burger Card -->
+        <div class="card">
+            <img src="burger.jpeg" alt="burger">
+            <div class="card-content">
+                <h3>Burger</h3>
+                <p>Burgers are rich in protein and customizable with fresh toppings to suit your taste.</p>
+                <div class="price">₹120</div>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+        <!-- Pizza Card -->
+        <div class="card">
+            <img src="pizza.jpeg" alt="pizza">
+            <div class="card-content">
+                <h3>Pizza</h3>
+                <p>Pizza is versatile and can be made with a variety of ingredients for every diet.</p>
+                <div class="price">₹250</div>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+        <!-- Sandwich Card -->
+        <div class="card">
+            <img src="sandwich.jpeg" alt="sandwich">
+            <div class="card-content">
+                <h3>Sandwich</h3>
+                <p>Sandwiches are quick, healthy, and perfect for a tasty meal on the go.</p>
+                <div class="price">₹80</div>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
