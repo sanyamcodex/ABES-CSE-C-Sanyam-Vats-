@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Image Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f3f4f6;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 250px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .card button {
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .card button:hover {
+      background: #15803d;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="cardImage" src="https://picsum.photos/id/237/250/150" alt="Random Image">
+    <button onclick="changeImage()">Change</button>
+  </div>
+
+  <script>
+    const images = [
+      "https://picsum.photos/id/237/250/150",
+      "https://picsum.photos/id/238/250/150",
+      "https://picsum.photos/id/239/250/150",
+      "https://picsum.photos/id/240/250/150"
+    ];
+    let index = 0;
+
+    function changeImage() {
+      index = (index + 1) % images.length;
+      document.getElementById("cardImage").src = images[index];
+    }
+  </script>
+</body>
+</html>
