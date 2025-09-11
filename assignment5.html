@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+            align-self: center;
+        }
+        nav {
+    width: 100%;
+    padding: 1rem;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+
+        div > button, #counter {
+            font-size: 2rem;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+        }
+
+        #counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            min-width: 2em;
+            display: inline-block;
+            text-align: center;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        body > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <img src="https://img.icons8.com/ios-filled/100/000000/counter.png" alt="Logo">
+            <span style="font-size: 2.5rem; font-weight: bold; text-align: center;">Counter App</span>
+        </div>
+    </nav>
+    <div>
+        <button onclick="decrement()">-</button>
+        <span id="counter">0</span>
+        <button onclick="increment()">+</button>
+    </div>
+    <script>
+        let count = 0;
+        const counter = document.getElementById('counter');
+
+        function updateCounter() {
+            counter.textContent = count;
+        }
+
+        function increment() {
+            if (count >= 10) {
+                alert('Value cannot be above 10');
+                return;
+            }
+            count++;
+            updateCounter();
+        }
+
+        function decrement() {
+            if (count <= 0) {
+                alert('Value cannot be below 0');
+                return;
+            }
+            count--;
+            updateCounter();
+        }
+    </script>
+</body>
+
+</html>
